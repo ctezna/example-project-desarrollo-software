@@ -38,10 +38,15 @@ Contents:
 
 ### Title
 
-The official title of the project.
+Food Truck Planner
 
 
 ### Abstract
+
+This Statement of Work (SOW) outlines the objectives, scope,
+deliverables, and timelines for the development and implementation of a
+new web application for Street Corner Eats. The project aims to optimize 
+route planning of food trucks
 
 Summarize the work, ideally in one paragraph.
 
