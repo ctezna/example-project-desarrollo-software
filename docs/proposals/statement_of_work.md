@@ -1,41 +1,5 @@
 # Statement Of Work
 
-A Statement of Work (SOW) is a narrative description of the required work. It
-stipulates the deliverables or services required to fulfill the contract, and it
-defines the task to be accomplished or services to be delivered in clear,
-concise and meaningful terms. Examples are by ChatGPT.
-
-Contents:
-
-- [Introduction](#introduction)
-- [Statement of work template](#statement-of-work-template)
-  - [Title](#title)
-  - [Abstract](#abstract)
-  - [Value](#value)
-  - [Scope](#scope)
-  - [Payment](#payment)
-- [Purpose](#purpose)
-  - [Objectives](#objectives)
-  - [Performance](#performance)
-- [Who does what](#who-does-what)
-  - [People](#people)
-  - [Roles](#roles)
-  - [Responsibilities](#responsibilities)
-- [Context](#context)
-  - [Present](#present)
-  - [Future](#future)
-- [Planning](#planning)
-  - [Requirements](#requirements)
-- [Other terms and conditions](#other-terms-and-conditions)
-  - [Client's obligations](#clients-obligations)
-- [Schedule](#schedule)
-  - [Expected start date and completion date](#expected-start-date-and-completion-date)
-  - [Sign-off](#sign-off)
-
-
-## Statement of work template
-
-
 ### Title
 
 Food Truck Planner
@@ -46,22 +10,11 @@ Food Truck Planner
 This Statement of Work (SOW) outlines the objectives, scope,
 deliverables, and timelines for the development and implementation of a
 new web application for Street Corner Eats. The project aims to optimize 
-route planning of food trucks
-
-Summarize the work, ideally in one paragraph.
-
-Include the most-relevant information about the project, objectives, issues,
-etc.
-
-Example: This Statement of Work (SOW) outlines the objectives, scope,
-deliverables, and timelines for the development and implementation of a new
-customer relationship management (CRM) system for XYZ Corporation. The project
-aims to enhance client interactions, streamline internal processes, and improve
-overall business operations through a customized CRM solution. The vendor will
-be responsible for the full lifecycle of the project, including system design,
-integration, data migration, user training, and post-implementation support. The
-timeline for completion is 12 months, with key milestones and deliverables
-identified at each phase. The total budget for the project is $500,000, with
+route planning of food trucks to allow a seamless delivery experience for 
+the clients and time optimization for the staff. The app will also allow
+order intake and pickup scheduling, as well as status updates for the orders.
+The timeline of completion is 6 months, with key milestones and deliverables
+identified at each phase. The total budget for the project is $18,000, with
 payment schedules linked to the completion of specific deliverables. This SOW
 ensures clear expectations, accountability, and performance standards throughout
 the duration of the project.
@@ -69,73 +22,24 @@ the duration of the project.
 
 ### Value
 
-Summarize the estimated value of the work, ideally in one paragraph.
-
-Include the most-relevant information about costs, including costs of products,
-services, materials, etc.
-
-If you prefer to provide more information about the value, then add an appendix
-section "Value".
-
-Example: The estimated value of the work outlined in this Statement of Work
-(SOW) is $500,000, covering the full scope of the CRM system development and
-implementation. This cost includes the design, customization, and integration of
-the software, along with data migration, user training, and post-implementation
-support. Additionally, the budget accounts for hardware and software licensing
-fees, professional services for system configuration, and ongoing maintenance
-for the first year. Payments will be made in installments upon the completion of
-key milestones, ensuring alignment with project progress and deliverables. Any
-potential changes or additional requirements will be assessed and billed
-separately, subject to agreement by both parties.
+The estimated value of this project is $18,000, covering the design and development of a Food Truck Order and Route Planning application for Street Corner Eats. This cost includes the creation of an order intake system to manage pre-orders from social media and phone channels, a daily route planning interface for manual truck scheduling, and an order status tracking module to improve internal coordination and customer communication. Additionally, the budget covers user role configuration (owner/dispatcher, truck operators, and kitchen staff), basic inventory notes functionality, and a simple truck schedule view. The value also includes testing, quality assurance, and delivery of an operational guide for system use. Payments will be structured in milestones aligned with key deliverables, including design approval, MVP completion, and final deployment. Any additional features beyond the defined MVP scope, such as advanced route optimization, GPS tracking, or payment integrations, will be evaluated and billed separately upon agreement.
 
 
-### Scope
+## Scope
 
-Summarize the range of the work, extent of the work, and parameters of the work,
-ideally in one paragraph.
-
-Include the most-relevant information about any requirements, such as people,
-processes, tools, etc.
-
-If you prefer to provide more information about the value, then add an appendix
-section "Scope".
-
-Example: The scope of this project includes the end-to-end development,
-customization, and deployment of a CRM system for XYZ Corporation, designed to
-improve client management and streamline internal workflows. The work involves
-detailed system design and configuration, data migration from legacy systems,
-integration with existing software platforms, and user training for
-approximately 100 employees across multiple departments. The project will
-require collaboration between the vendor’s development team, XYZ Corporation’s
-IT department, and key business stakeholders. Tools used will include CRM
-software, data migration tools, and training platforms. Additionally, the vendor
-will provide post-launch support for a period of six months to address any
-system issues or updates. The work will be completed in a phased approach, with
-specific deliverables outlined at each stage to ensure project milestones are
-met on time.
+The scope of this project includes the design, development, testing, and deployment of a **Food Truck Order and Route Planner** web application for Street Corner Eats. The system will support manual customer order entry from phone calls and social media, daily route planning, truck assignment, order status tracking, simple inventory notes, and an optional customer order lookup feature. The project includes user authentication, role-based access control, database design, responsive web interfaces, and system testing. Development will require collaboration between the development team and the client's owner, dispatchers, truck operators, and kitchen staff to ensure the application meets operational needs. The solution will be built using modern web development technologies, a relational database, and version control tools. The project follows an MVP approach and excludes advanced features such as live GPS tracking, automated route optimization, online payment processing, and full point-of-sale (POS) functionality.
 
 
 ### Payment
 
-Summarize the payment for the work, in one paragraph.
+The total project budget for RFP-016 (Food Truck Order and Route Planner) is **$18,000 USD**, distributed across payments tied to key project milestones:
 
-Include the most-relevant budget requirements, payment schedule, transfer
-methods, etc.
+- **20% upon signing** ($3,600 USD) — due upon contract signature, to initiate the project (requirements gathering and initial design).
+- **30% upon MVP definition** ($5,400 USD) — due upon approval of the functional design for order intake, route planning, and order status.
+- **30% upon functional delivery** ($5,400 USD) — due upon completion of the core functionality (order & route planning app, truck schedule view) and successful internal QA.
+- **20% upon project closeout** ($3,600 USD) — due upon delivery of the operational guide, QA evidence, and final acceptance by Street Corner Eats.
 
-If you prefer to provide more information about the payment, then add an
-appendix section "Payment".
-
-Example: The total budget for this project is $500,000, with payments structured
-across five key milestones. An initial payment of 20% ($100,000) will be due
-upon signing the contract to initiate the project. Subsequent payments will be
-made as follows: 30% ($150,000) upon completion of system design and approval,
-20% ($100,000) upon successful integration and data migration, 20% ($100,000)
-after user training and system testing, and the final 10% ($50,000) upon project
-completion and post-launch support handover. Payments will be made via bank
-transfer within 15 days of invoice submission, and invoices will be issued upon
-the successful completion of each milestone. Any changes to the project scope or
-timeline will be subject to additional billing, with prior written approval from
-XYZ Corporation.
+Payments will be made via **bank transfer or an international payment platform (e.g., Wise, PayPal)** within **15 days** of invoice submission. Any changes to project scope (e.g., adding live GPS, online payments, or algorithmic route optimization — explicitly out of scope) will be billed separately, subject to prior written approval from the client.
 
 
 ## Purpose
@@ -143,73 +47,32 @@ XYZ Corporation.
 
 ### Objectives
 
-Describe the objectives of the work: what is to be achieved and delivered by the
-completion of the contract.
-
-We recommend [Objectives and Key Results
-(OKRs)](http://github.com/joelparkerhenderson/objectives-and-key-results/).
-
-Identify the most relevant goals, outcomes, and intended uses of the completed
-work.
-
-Example: The primary objective of this project is to design, develop, and
-implement a customized customer relationship management (CRM) system for XYZ
-Corporation, aimed at enhancing customer interactions, improving data
-management, and streamlining internal workflows. By the completion of the
-contract, the following key deliverables will be achieved: a fully integrated
-CRM platform, migration of existing client data into the new system,
+The primary objective of this project is to design, develop, and
+implement a web application for Street Corner Eats, aimed at optimizing
+food truck route planning, order intake, order scheduling, and update visualizations
+for the orders. By the completion of the contract, the following key deliverables will be achieved: 
+a fully functional web application, migration of existing client data into the new system,
 comprehensive user training for employees, and a seamless transition to ongoing
-system support. The CRM system will be configured to meet the specific needs of
-various departments, including sales, marketing, and customer service, enabling
-improved collaboration, more efficient data access, and enhanced reporting
-capabilities. The successful completion of this project will result in increased
-operational efficiency, better customer insights, and a more cohesive customer
+system support. The successful completion of this project will result in increased
+operational efficiency, better customer insights, and a more cohesive customer and staff
 experience across the organization.
 
 
 ### Performance
 
-Describe the performance of the work: how the work is measured, what performance
-indicators are relevant, and what measurements and metrics are relevant.
+The performance of the Food Truck Order and Route Planner will be measured using business and technical KPIs to ensure the system improves daily operations, order management, and staff coordination.
 
-We recommend [Key Performance Indicators
-(KPIs)](http://github.com/joelparkerhenderson/key-performance-indicator/).
+#### Business Performance Metrics
 
-Identify the most-relevant performance measurements and metrics, for the
-business aspects (e.g. net revenue, customer satisfaction) and for the technical
-aspects (e.g. average daily users, percent uptime).
+- **Order Accuracy:** At least **98%** of orders are recorded correctly.
+- **Customer Satisfaction:** Achieve a satisfaction rating of **90%** or higher.
+- **Order Processing:** Reduce order entry and assignment time by **30%**.
 
-Example: The performance of this project will be measured through a combination
-of business and technical indicators to ensure that the CRM system meets both
-functional requirements and organizational goals. Performance will be monitored
-through regular status meetings, user feedback, and system reports. Adjustments
-and optimizations will be made as needed to meet or exceed these agreed-upon
-metrics.
+#### System Performance Metrics
 
-Example business performance metrics:
-
-* Customer Satisfaction: A customer satisfaction score of 85% or higher should
-  be achieved through internal surveys measuring satisfaction with the CRM’s
-  ease of use, functionality, and overall impact on service delivery.
-
-* Net Revenue Impact: The CRM system should contribute to a 15% increase in lead
-  conversion rates and a 10% increase in customer retention within the first
-  year, as a result of more personalized customer management and streamlined
-  processes.
-
-Example system performance metrics:
-
-* Uptime: The CRM system must maintain at least 99.9% uptime during operation to
-  ensure business continuity.
-
-* Response Time: System response time should be less than 3 seconds for all user
-  actions, other than batch data processing, ensuring smooth user interactions.
-
-* Data Accuracy: Migration of existing customer data must achieve at least 98%
-  accuracy with no data loss.
-
-* User Adoption: At least 90% of end-users should be actively using the CRM
-  within 30 days post-implementation.
+- **Uptime:** Maintain at least **99.5%** system availability.
+- **Response Time:** Average response time below **2 seconds**.
+- **User Adoption:** At least **90%** of staff actively use the system within the first month.
 
 
 ## Who does what
@@ -217,71 +80,66 @@ Example system performance metrics:
 
 ### People
 
-Identify all the people who are involved a.k.a. the participants a.k.a. the
-stakeholders.
+The following stakeholders are involved in the Food Truck Order and Route Planner project for Street Corner Eats:
 
-Include employees, contractors, consultants, partners, vendors, customers,
-auditors, investors, advisors, etc., and provide relevant contact information,
-such as phone numbers, email addresses, messaging usernames, web links,
-availability hours, etc.
+Client / Business Owner (Street Corner Eats Owner)
+Responsible for defining business requirements, approving deliverables, and making final decisions regarding system functionality and daily operations. The owner will also use the system to plan routes and review demand.
 
-We suggest creating a document named "people" that contains this information,
-then continuously improving it.
+Dispatcher / Operations Manager
+Responsible for managing daily order intake, assigning routes to each food truck, and ensuring that orders are properly scheduled. This role interacts directly with the system on a daily basis.
+
+Truck Operators (Drivers)
+End users who follow the assigned routes and update order statuses (e.g., order ready, order delivered). They rely on the system for daily planning and execution.
+
+Kitchen Staff
+Responsible for preparing orders based on incoming pre-orders and updating preparation status. They use the system to track demand and manage food preparation workflows.
+
+Development Team
+Responsible for designing, building, testing, and deploying the application. This includes software developers, UI/UX designers, and QA testers.
+
+Project Manager
+Oversees project progress, ensures deadlines are met, manages communication between stakeholders, and coordinates deliverables.
+
+Optional Stakeholders (Future Scope)
+Customers may interact with the system through a basic order lookup feature in future versions.
 
 
 ### Roles
 
-Identify the roles that are involved.
+- **Owner / Dispatcher** — Oversees daily operations; reviews incoming pre-orders; assigns manual routes and stops to each truck; monitors order status and inventory notes; makes day-to-day planning decisions.
 
-Include employee roles, contractor roles, consultant roles, partner roles,
-vendor roles, customer roles, auditor roles, investor roles, advisor roles,
-etc., and provide relevant role information, such as what the role does, its
-capabilities and limits, etc.
+- **Truck Operator** — Views the daily route and schedule assigned by the dispatcher; updates order status as orders are prepared and delivered; reports any on-the-ground issues (traffic, closures) that affect the plan.
 
-We suggest creating a document named "roles" that contains this information,
-then continuously improving it.
+- **Kitchen Prep Staff** — Views incoming orders to plan stock and preparation; updates simple inventory notes; coordinates with truck operators on order readiness.
 
 
 ### Responsibilities
 
-Identify the responsibilities that are involved.
+| Task / Area | Owner / Dispatcher | Truck Operator | Kitchen Prep Staff |
+|---|---|---|---|
+| Order intake (logging pre-orders) | Responsible | Informable | Informable |
+| Daily route planning (manual assignment) | Responsible/Accountable | Consultable | Omittable |
+| Truck schedule visibility | Accountable | Responsible | Informable |
+| Order status updates | Consultable | Responsible | Consultable |
+| Inventory notes | Consultable | Informable | Responsible |
+| Operational guide & QA sign-off | Accountable | Consultable | Consultable |
 
-We recommend using a responsibility assignment matrix (RAM) a.k.a. linear
-responsibility chart (LRC).
-
-We suggest creating a document named "responsibilities" that contains this
-information, then continuously improving it. We use a RAM called a RACIO matrix.
-The matrix columns are roles. The matrix rows are areas of responsibility, such
-as task groupings. The matrix cells are role-task assignments. A matrix cell
-indicates the role-responsibility assignment as one of Responsible, Accountable,
-Consultable, Informable, Omittable. A matrix cell may also provide any
-assignment notes and details.
+**Legend:** R = Responsible, A = Accountable, C = Consultable, I = Informable, O = Omittable
 
 
-## Context
+### Context
 
+## Present
 
-### Present
+Street Corner Eats runs two food trucks with pre-orders managed informally via social media and phone calls, and routes chosen by habit. This causes poor demand visibility for inventory/staffing and inconsistent customer updates.
 
-Identify how the work is involved with the overall organization, its objectives,
-its projects, and its industry.
+## Future
 
-Describe the organization, end users, bibliography, references, technical
-experts in the field, etc.
+This MVP is internal software with optional customer order lookup. Future phases (not in this SOW) could add route optimization, online payments, or live GPS tracking.
 
-Include anything that will assist the contractor in formulating a good bid, and
-the client in achieving shared understanding.
+### Planning
 
-
-### Future
-
-Describe how the work relates to the future, such as of the project,
-organization, industry, etc.
-
-Identify any relevant future roadmaps, future objectives, future work, etc.
-
-Identify any relevant future people, such as follow-on participants, potential
-upcoming stakeholders, etc.
+**Requirements:**
 
 
 
@@ -289,6 +147,17 @@ upcoming stakeholders, etc.
 
 
 ### Requirements
+
+1. Order intake & pickup scheduling — due Aug 23, 2026
+2. Manual truck route planning — due Sep 23, 2026
+3. Order status updates & inventory notes — due Oct 23, 2026
+4. Bug fixes & optimization — due Nov 6, 2026
+
+**Deliverables:** Deployed web app (cloud/GCP), operational guide, QA evidence.
+
+**Acceptance:** Each milestone reviewed and approved by Street Corner Eats before payment release.
+
+**Risks:** Multi-channel order collection, tight timeline, physical route constraints (traffic/closures).
 
 Describe the tasks or activities to be performed by the contractor.
 
