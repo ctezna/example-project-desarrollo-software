@@ -82,25 +82,25 @@ The performance of the Food Truck Order and Route Planner will be measured using
 
 The following stakeholders are involved in the Food Truck Order and Route Planner project for Street Corner Eats:
 
-Client / Business Owner (Street Corner Eats Owner)
+**Client / Business Owner (Street Corner Eats Owner)**
 Responsible for defining business requirements, approving deliverables, and making final decisions regarding system functionality and daily operations. The owner will also use the system to plan routes and review demand.
 
-Dispatcher / Operations Manager
+**Dispatcher / Operations Manager**
 Responsible for managing daily order intake, assigning routes to each food truck, and ensuring that orders are properly scheduled. This role interacts directly with the system on a daily basis.
 
-Truck Operators (Drivers)
+**Truck Operators (Drivers)**
 End users who follow the assigned routes and update order statuses (e.g., order ready, order delivered). They rely on the system for daily planning and execution.
 
-Kitchen Staff
+**Kitchen Staff**
 Responsible for preparing orders based on incoming pre-orders and updating preparation status. They use the system to track demand and manage food preparation workflows.
 
-Development Team
+**Development Team**
 Responsible for designing, building, testing, and deploying the application. This includes software developers, UI/UX designers, and QA testers.
 
-Project Manager
+**Project Manager**
 Oversees project progress, ensures deadlines are met, manages communication between stakeholders, and coordinates deliverables.
 
-Optional Stakeholders (Future Scope)
+**Optional Stakeholders (Future Scope)**
 Customers may interact with the system through a basic order lookup feature in future versions.
 
 
@@ -124,8 +124,6 @@ Customers may interact with the system through a basic order lookup feature in f
 | Inventory notes | Consultable | Informable | Responsible |
 | Operational guide & QA sign-off | Accountable | Consultable | Consultable |
 
-**Legend:** R = Responsible, A = Accountable, C = Consultable, I = Informable, O = Omittable
-
 
 ### Context
 
@@ -137,50 +135,38 @@ Street Corner Eats runs two food trucks with pre-orders managed informally via s
 
 This MVP is internal software with optional customer order lookup. Future phases (not in this SOW) could add route optimization, online payments, or live GPS tracking.
 
-### Planning
-
-**Requirements:**
-
-
 
 ## Planning
 
 
 ### Requirements
 
-1. Order intake & pickup scheduling — due Aug 23, 2026
-2. Manual truck route planning — due Sep 23, 2026
-3. Order status updates & inventory notes — due Oct 23, 2026
-4. Bug fixes & optimization — due Nov 6, 2026
+The contractor shall design, implement, test, and deliver a Minimum Viable Product (MVP) for the Food Truck Order and Route Planner described in RFP-016. The solution will support Street Corner Eats' internal operations by providing functionality for order management, route planning, truck scheduling, inventory notes, order status tracking, and customer order lookup.
 
-**Deliverables:** Deployed web app (cloud/GCP), operational guide, QA evidence.
+The work will be executed using an incremental development approach. The project will begin with the analysis of the RFP and clarification of stakeholder requirements, followed by the definition and validation of the system requirements. Once the requirements baseline has been approved, the contractor will implement the functional and non-functional requirements, prepare the required documentation, and deliver the final application.
 
-**Acceptance:** Each milestone reviewed and approved by Street Corner Eats before payment release.
+The implementation includes the following deliverables:
 
-**Risks:** Multi-channel order collection, tight timeline, physical route constraints (traffic/closures).
+- Order Creation module
+- Route Planning module
+- Order Status Management
+- Pickup Scheduling
+- Truck Schedule View
+- Inventory Notes
+- Customer Order Lookup
+- User Role Authorization
+- Data Persistence
+- Internal System Usability
 
-Describe the tasks or activities to be performed by the contractor.
+Each functional deliverable will be considered complete when it has been implemented, integrated with the application, successfully tested according to its acceptance criteria, and demonstrated to the client. Non-functional deliverables will be considered complete when the specified quality attributes have been verified through testing and system validation.
 
-Include a detailed description of what is required for each of the identified
-deliverables.
+The project milestones are organized as follows:
 
-Provide sufficient information so that all parties will be able to understand
-what signals completion of a phase, or milestone, or deliverable.
-
-In most situations, this section will identify what methodology and sequence
-each of the deliverables will need to meet, how the deliverable will need to be
-delivered and what will be the relationship of one deliverable with another.
-This section will provide information on the language, format, version and
-content requirements for each task or activity and each deliverable or milestone
-in the work.
-
-It will also reference the Schedule and Estimated Level of Effort expected for
-completion of the work; any Specifications or Standards which will be used; and
-the Method and Source of Acceptance which will be applied by the Client to the
-deliverables. This information may help to establish a progress payment
-schedule.
-
-You may see all this information included in a table and/or text.
+- **M1 – RFP Analysis:** Review the RFP, identify assumptions, risks, and clarification questions.
+- **M2 – Requirements Baseline:** Define and approve all functional and non-functional requirements.
+- **M3 – Technical Proposal:** Finalize the technical solution and implementation approach.
+- **M4 – Cost Proposal:** Prepare effort estimates and project cost based on the approved requirements.
+- **M5 – Version 1.0 Delivery:** Deliver the complete MVP, including software, documentation, and QA evidence for client acceptance.
 
 
 ## Other terms and conditions
@@ -188,26 +174,10 @@ You may see all this information included in a table and/or text.
 
 ### Client's obligations
 
-Identify the access to facilities, the loan or use of Furnished Equipment, the
-access to documentation, networks, etc. which Client will provide to the
-Contractor. 
-
-The following are examples of the contents that may be included under this
-heading:
-
-* Ensure availability of staff with whom the contractor may need to consult.
-
-* Access to the Client's policies, procedures, publications, reports, studies,
-  etc.
-
-* Access to appropriate guidelines, standards, industry regulations.
-  
-* Provide comments on draft reports within five working days from receipt of
-  report.
-
-* Schedule events such as meetings, calls, conferences, if required.
-
-* Provide applicable documentation.
+- Ensure availability of staff with whom the contractor may need to consult.
+- Offer the relevant information required to develop de software, such as guidelines, standards, branding elements, etc.
+- Assist to planned meetings to assess the project development.
+- Provide the necessary and timely feedback (no more than 3 working days after each meeting) to make the proper adjustments to the product.
 
 
 ## Schedule
@@ -215,24 +185,14 @@ heading:
 
 ### Expected start date and completion date
 
-Identify the period in which the work is to be performed.
+The services of the Contractor will be required for a period of approximately
+6 months, commencing on or about july 2026, and with
+expected completion on or about november 2026.
 
-More details are provided in the section of the SOW which identify the specific
-schedule which will be required for completion of the work.
-
-Example language:
-
-* The services of the Contractor will be required for a period of approximately
-  (weeks, months or years), commencing on or about (day, month, year), and with
-  expected completion on or about (day, month, year).
-
-This section may also specify allowable time for work, such as number of hours
-that can be billed per day, week, month, etc.
+Allowable time for work: no more than 8 hours per day can be billed.
 
 
 ### Sign-off
-
-The following phrase will appear at the end of each Statement of Work:
 
 NOTE: Before signing the Statement of Work, if you have any questions or
 concerns, please call the Work Authority indicated above to negotiate any
