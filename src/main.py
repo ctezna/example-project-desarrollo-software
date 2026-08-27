@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from data.mock_data import mock_data
-from services.reservation_service import get_health
+from data.mock_data import mock_health_data
+from services.health_service import get_health
 
 app = FastAPI(
     title="FastAPI Starter",
@@ -11,7 +11,7 @@ app = FastAPI(
 
 @app.get("/")
 def read_root():
-    return mock_data
+    return mock_health_data
 
 
 @app.get("/health")
