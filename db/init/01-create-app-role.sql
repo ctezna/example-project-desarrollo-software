@@ -1,0 +1,2 @@
+CREATE ROLE reservas_app WITH LOGIN PASSWORD 'reservas_app' NOSUPERUSER NOBYPASSRLS;
+CREATE DATABASE reservas_db OWNER reservas_app;

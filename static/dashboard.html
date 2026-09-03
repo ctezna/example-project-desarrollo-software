@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Dashboard — Fresh Fork Restaurant Group</title>
+  <script src="/analytics.js"></script>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 760px; margin: 40px auto; }
+    table { width: 100%; border-collapse: collapse; margin-top: 16px; }
+    th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #ddd; }
+    form.inline { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+    form.inline input { padding: 6px; }
+    button { cursor: pointer; }
+    #error { color: #b00020; }
+    .top-bar { display: flex; justify-content: space-between; align-items: baseline; }
+    #resumen { color: #555; }
+  </style>
+</head>
+<body id="dashboard" hidden>
+  <div class="top-bar">
+    <h1>Reservas</h1>
+    <div>
+      <span id="whoami"></span> ·
+      <a href="#" id="logout">Salir</a>
+    </div>
+  </div>
+
+  <p id="resumen">Promedio de personas por reserva: <span id="promedio-personas">—</span></p>
+  <p id="error" hidden></p>
+
+  <table>
+    <thead>
+      <tr><th>ID</th><th>Cliente</th><th>Teléfono</th><th>Fecha y hora</th><th>Personas</th><th>Mesa</th><th>Estado</th><th></th></tr>
+    </thead>
+    <tbody id="reservas-body"></tbody>
+  </table>
+
+  <h2>Nueva reserva</h2>
+  <form class="inline" id="crear-form">
+    <input id="cliente_nombre" placeholder="Nombre del cliente" required />
+    <input id="telefono" placeholder="Teléfono" required minlength="7" maxlength="20" />
+    <input id="fecha_hora" type="datetime-local" required />
+    <input id="num_personas" type="number" min="1" placeholder="Personas" value="2" required />
+    <input id="mesa_numero" type="number" min="1" placeholder="Mesa" value="1" required />
+    <button type="submit">Reservar</button>
+  </form>
+
+  <script>
+    const token = localStorage.getItem("access_token");
+    if (!token) {
+      window.location.href = "/login.html";
+    }
+
+    function authHeaders() {
+      return { Authorization: `Bearer ${token}`, "Content-Type": "application/json" };
+    }
+
+    function showError(message) {
+      const el = document.getElementById("error");
+      el.textContent = message;
+      el.hidden = false;
+    }
+
+    async function cargarPerfil() {
+      const response = await fetch("/auth/me", { headers: authHeaders() });
+      if (response.status === 401) {
+        localStorage.removeItem("access_token");
+        window.location.href = "/login.html";
+        return null;
+      }
+      return response.json();
+    }
+
+    async function cargarReservas() {
+      const response = await fetch("/reservas", { headers: authHeaders() });
+      if (!response.ok) {
+        showError("No se pudieron cargar las reservas.");
+        return;
+      }
+      const reservas = await response.json();
+      const body = document.getElementById("reservas-body");
+      body.innerHTML = "";
+      for (const reserva of reservas) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${reserva.id}</td>
+          <td>${reserva.cliente_nombre}</td>
+          <td>${reserva.telefono}</td>
+          <td>${new Date(reserva.fecha_hora).toLocaleString()}</td>
+          <td>${reserva.num_personas}</td>
+          <td>${reserva.mesa_numero}</td>
+          <td>${reserva.estado}</td>
+          <td><button data-id="${reserva.id}" class="cancelar">Cancelar</button></td>
+        `;
+        body.appendChild(tr);
+      }
+      document.querySelectorAll(".cancelar").forEach((btn) => {
+        btn.addEventListener("click", () => cancelarReserva(btn.dataset.id));
+      });
+    }
+
+    async function cancelarReserva(id) {
+      const response = await fetch(`/reservas/${id}`, { method: "DELETE", headers: authHeaders() });
+      if (response.status === 403) {
+        showError("Solo un gerente puede cancelar reservas.");
+        return;
+      }
+      await cargarReservas();
+    }
+
+    async function cargarResumen() {
+      const response = await fetch("/reservas/resumen", { headers: authHeaders() });
+      const resumen = await response.json();
+      document.getElementById("promedio-personas").textContent = resumen.promedio_personas.toFixed(1);
+    }
+
+    document.getElementById("crear-form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const body = {
+        cliente_nombre: document.getElementById("cliente_nombre").value,
+        telefono: document.getElementById("telefono").value,
+        fecha_hora: new Date(document.getElementById("fecha_hora").value).toISOString(),
+        num_personas: parseInt(document.getElementById("num_personas").value || "1", 10),
+        mesa_numero: parseInt(document.getElementById("mesa_numero").value || "1", 10),
+      };
+      const response = await fetch("/reservas", { method: "POST", headers: authHeaders(), body: JSON.stringify(body) });
+      if (!response.ok) {
+        showError("No se pudo crear la reserva.");
+        return;
+      }
+      event.target.reset();
+      await cargarReservas();
+      cargarResumen();
+    });
+
+    document.getElementById("logout").addEventListener("click", (event) => {
+      event.preventDefault();
+      localStorage.removeItem("access_token");
+      window.location.href = "/login.html";
+    });
+
+    (async () => {
+      const perfil = await cargarPerfil();
+      if (!perfil) return;
+      identifyUsuario(perfil);
+      document.getElementById("whoami").textContent = `${perfil.email} (${perfil.rol})`;
+      document.getElementById("dashboard").hidden = false;
+      await cargarReservas();
+      cargarResumen();
+    })();
+  </script>
+</body>
+</html>
